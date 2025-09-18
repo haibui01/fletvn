@@ -1,6 +1,6 @@
 import flet as ft
 
-def main(page: ft.Page):
+def example(page):
     txt_number = ft.TextField(value="0", text_align="right", width=100)
 
     def minus_click(e):
@@ -22,4 +22,5 @@ def main(page: ft.Page):
         )
     )
 
-ft.app(target=main)
+# chạy app
+ft.app(target=example)
