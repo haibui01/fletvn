@@ -1,7 +1,10 @@
 import flet as ft
 
-def example(page):
-    txt_number = ft.TextField(value="0", text_align="right", width=100)
+def main(page: ft.Page):
+    page.title = "FletVN Counter"
+    page.vertical_alignment = ft.MainAxisAlignment.CENTER
+
+    txt_number = ft.TextField(value="0", text_align=ft.TextAlign.RIGHT, width=100)
 
     def minus_click(e):
         txt_number.value = str(int(txt_number.value) - 1)
@@ -18,9 +21,8 @@ def example(page):
                 txt_number,
                 ft.IconButton(ft.icons.ADD, on_click=plus_click),
             ],
-            alignment="center",
+            alignment=ft.MainAxisAlignment.CENTER,
         )
     )
 
-# chạy app
-ft.app(target=example)
+ft.app(target=main)
